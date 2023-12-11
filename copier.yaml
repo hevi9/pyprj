@@ -1,0 +1,7 @@
+_tasks:
+  - "poetry install"
+  - "git init"
+  - "git add ."
+  - "git commit -m 'build: initial'"
+
+
