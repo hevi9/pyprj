@@ -1,3 +1,7 @@
+is_farting:
+  type: bool
+  help: Do you fart
+
 _tasks:
 - "git init --initial-branch main"
 - "git add ."
