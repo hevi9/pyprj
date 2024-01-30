@@ -2,5 +2,13 @@ is_farting:
   type: bool
   help: Do you fart
 
+#_envops:
+#  variable_end_string: "X_"
+#  variable_start_string: "_X"
+
+_message_after_copy: |
+  make local
+
+
 
 

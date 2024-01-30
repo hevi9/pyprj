@@ -13,7 +13,7 @@ local::
 	test -d .git && pre-commit install
 
 check::
-	poetry run mypy project_name
+	poetry run mypy X_project_name_X
 
 check::
 	poetry run pytest tests
