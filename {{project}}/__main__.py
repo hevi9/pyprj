@@ -2,16 +2,16 @@ from typing import Optional, Annotated
 
 import typer
 
-from . import app, __version__
+from . import app, __version__, NAME
 
 
 def _version(value: bool) -> None:
     if value:
-        typer.echo(f"creat {__version__}")
+        typer.echo(f"{NAME} {__version__}")
         raise typer.Exit(0)
 
 
-@app.callback()
+@app.command()
 def main(
     _version: Annotated[
         Optional[bool],

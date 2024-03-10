@@ -1,8 +1,0 @@
-- [copier](https://copier.readthedocs.io)
-- [ ] Identifier substitution
-- [ ] mypy
-- [ ] ruff
-- [ ] pytest
-- [ ] pre-commit
-- [ ] commitizen
-- [ ] pip-audit

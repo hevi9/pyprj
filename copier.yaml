@@ -1,6 +1,6 @@
-is_farting:
-  type: bool
-  help: Do you fart
+project:
+  type: str
+  help: Project name
 
 #_message_after_copy: |
 #  make local

@@ -3,6 +3,9 @@
     "runs": [
       {
         "text": "make local"
+      },
+      {
+        "text": "make check"
       }
     ]
   }

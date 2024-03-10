@@ -1,3 +1,5 @@
+unexport VIRTUAL_ENV
+
 help::
 	echo "Targets:"
 	echo "  local"
@@ -6,17 +8,18 @@ help::
 	echo "  build"
 
 local::
+	poetry lock --no-update
 	poetry install
 
 local::
 	test -d .git && pre-commit install
 
 check::
-	poetry run mypy project_name
+	poetry run mypy {{project}}
+
+check::
+	poetry run ruff check {{project}}
 
 check::
 	poetry run pytest tests
-
-build::
-	docker build .
 
