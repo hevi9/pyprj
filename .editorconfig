@@ -9,7 +9,7 @@ indent_style = space
 indent_size = 2
 max_line_length = 100
 
-[{Makefile, **.mk}]
+[{Makefile, **.mk,Makefile.jinja}]
 indent_style = tab
 indent_size = 4
 
