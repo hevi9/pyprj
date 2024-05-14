@@ -12,7 +12,9 @@ local::
 	poetry install
 
 local::
-	test -d .git && pre-commit install
+ifeq (,$(wildcard ./git))
+	pre-commit install
+endif
 
 check::
 	poetry run mypy {{project}}
@@ -23,3 +25,7 @@ check::
 check::
 	poetry run pytest tests
 
+update::
+	poetry update
+
+build::
