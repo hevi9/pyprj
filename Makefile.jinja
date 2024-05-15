@@ -12,7 +12,7 @@ local::
 	poetry install
 
 local::
-ifeq (,$(wildcard ./git))
+ifneq (,$(wildcard ./.git))
 	pre-commit install
 endif
 
@@ -29,3 +29,5 @@ update::
 	poetry update
 
 build:: check
+
+clean::
