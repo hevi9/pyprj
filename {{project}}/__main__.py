@@ -2,7 +2,7 @@ from typing import Optional, Annotated
 
 import typer
 
-from . import app, __version__, NAME
+from . import cli, __version__, NAME
 
 
 def _version(value: bool) -> None:
@@ -11,7 +11,7 @@ def _version(value: bool) -> None:
         raise typer.Exit(0)
 
 
-@app.command()
+@cli.command()
 def main(
     _version: Annotated[
         Optional[bool],
@@ -26,4 +26,4 @@ def main(
 
 
 if __name__ == "__main__":
-    app()
+    cli()

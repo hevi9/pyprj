@@ -1,10 +1,10 @@
 from typer.testing import CliRunner
 
-from {{project}}.__main__ import app
+from {{project}}.__main__ import cli
 
 runner = CliRunner()
 
 def test_main() -> None:
-    result = runner.invoke(app, ["--version"])
+    result = runner.invoke(cli, ["--version"])
     assert result.exit_code == 0
     assert "{{project}}" in result.output

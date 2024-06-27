@@ -1,3 +1,8 @@
+help:
+	@echo 'Targets:'
+	@grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'
+
+
 unexport VIRTUAL_ENV
 
 help::
@@ -7,7 +12,7 @@ help::
 	echo "  clean"
 	echo "  build"
 
-local::
+local::  ## Setup up local development
 	poetry lock --no-update
 	poetry install
 
@@ -16,7 +21,7 @@ ifneq (,$(wildcard ./.git))
 	pre-commit install
 endif
 
-check::
+check::  ## Check software
 	poetry run mypy {{project}}
 
 check::
@@ -25,9 +30,9 @@ check::
 check::
 	poetry run pytest tests
 
-update::
+update::  ## Update library dependencies
 	poetry update
 
 build:: check
 
-clean::
+clean::  ## Clean temporary files
