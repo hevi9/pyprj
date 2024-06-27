@@ -9,6 +9,9 @@ indent_style = space
 indent_size = 2
 max_line_length = 100
 
+[{**.py,**.pyi}]
+indent_size = 4
+
 [{Makefile,**.mk,Makefile.jinja}]
 indent_style = tab
 indent_size = 4
